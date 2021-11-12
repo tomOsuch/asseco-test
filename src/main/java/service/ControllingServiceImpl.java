@@ -12,7 +12,7 @@ public class ControllingServiceImpl implements DbRequestService {
             "INNER JOIN Employees ON Job_history.employee_id = Employees.employee_id " +
             "INNER JOIN Jobs ON Job_history.job_id = Jobs.job_id " +
             "WHERE (Employees.last_name = 'Kowalski' OR Employees.last_name = 'Nowak') " +
-            "AND Employees.salary < Jobs.max_salary - (Jobs.max_salary * 25 / 100) " +
+            "AND Employees.max_salaru < Jobs.max_salary - (Jobs.max_salary * 25 / 100) " +
             "ORDER BY Departments.department_name ASC;";
 
     @Override
