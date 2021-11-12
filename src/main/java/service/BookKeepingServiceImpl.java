@@ -10,7 +10,6 @@ public class BookKeepingServiceImpl implements DbRequestService {
             "FROM Job_history " +
             "INNER JOIN(SELECT * FROM Employees) Employees ON Job_history.employee_id = Employees.employee_id " +
             "INNER JOIN Departments ON Job_history.department_id = Departments.department_id " +
-            "WHERE Departments.department_name = 'DRK' " +
             "GROUP BY Employees.last_name, Employees.first_name " +
             "ORDER BY Employees.last_name ASC, Employees.first_name ASC;";
 
